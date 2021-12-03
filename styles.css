@@ -1,35 +1,98 @@
 html,body{
-    height: 100%;
-    width: 100%;
-    margin: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+input[type='text']{
+  border-radius: 4px;
+  outline: none;
+  border: 1px black solid;
+  padding: 2px;
 }
 #wrapper{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    background-image: url("images/girl.jpg");
-    background-size: cover;
-    background-position: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .container {
-    width: 600px;
-    max-height: 400px;
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    grid-auto-flow: column;
-    gap: 10px;
-    border-radius: 5px;
-    background-color: #87ceebaa;
-    /* background-color: #f5deb3aa; */
-    padding: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+  width: 500px;
+  max-height: 300px;
+  display: flex;
+  border-radius: 5px;
+  background-color: #FFC0CBaa;
+  padding: 15px 15px 30px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0px 0px 10px 10px #00000044;
+  animation: fade 1.5s;
+}
+
+.column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+button[onclick="savePrediction()"] {
+  margin-top: 20px;
+}
+form {
+  min-height: 150px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#pop-up{
+  visibility: hidden;
+  position: absolute;
+  height: 64px;
+  width: 300px;
+  top: 20px;
+  left: calc(50% - 150px);
+  border-radius: 5px;
+  background-color: #ee0000aa;
+  color:white;
+  font-weight: bolder;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  border: 1px black solid;
+}
+
+button:hover{
+  background-color: palevioletred;
+  color: white;
+}
+
+#saved-answer-header{
+  visibility: hidden;
+}
+#clear-button{
+  visibility: hidden;
+}
+#saved-gender{
+  visibility: hidden;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
   }
-  .container > * {
-    height: 30px;
-    display: flex;
-    align-items: center;
+  100% {
+    opacity: 100%;
   }
-  
+}

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,60 +11,44 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="pop-up">
+    <p>error</p>
+  </div>
    <div id="wrapper">
     <div class="container">
-        <div>
-          <h1>Mr. or Ms.</h1>
-        </div>
-        
-        <div>
-          <label for="name">name:</label>
-          <input type="text" id="name" name="name-input" maxlength="255">
-        </div>
-        
-        <div>
-          <input type="radio" id="male-radio-button" name="gender" value="male">
-          <label for="male-radio-button">male</label><br>
-        </div>
-        
-        <div>
-          <input type="radio" id="female-radio-button" name="gender" value="female">
-          <label for="female-radio-button">female</label><br>
-        </div>
-        
-        <div>
-          <button onclick="getData()">submit</button>
-          
-        </div>
-        
+      <div class="column">
+        <h1>Mr. or Ms.</h1>
+        <form>
+          <div>
+            <label for="name">name:</label>
+            <input placeholder='enter name here' type="text" id="name" name="name-input" maxlength="255">
+          </div>
+          <div>
+            <input type="radio" id="male-radio-button" name="gender" value="male">
+            <label for="male-radio-button">male</label><br>
+          </div>
+          <div>
+            <input type="radio" id="female-radio-button" name="gender" value="female">
+            <label for="female-radio-button">female</label><br>
+          </div>
+          <div>
+            <button onclick="getData()">submit</button>
+          </div>
+        </form>      
         <div>
           <button onclick="savePrediction()">save</button>
         </div>
-        
-        <div>
-          <h1>prediction</h1>
-        </div>
-        
-        <div>
-          <p id="gender-prediction">gender: ?</p>
-        </div>
-        
-        <div>
-          <p id="probability-prediction">probability: ?</p>
-        </div>
-        
-        <div>
-          <h1>saved answer</h1>
-        </div>
-        
-        <div>
-          <p id="saved-gender">saved answer</p>
-        </div>
-        
-        <div>
-          <button onclick="clearSavedPrediction()">clear</button>
-        </div>
       </div>
+      <div>
+        <h1>prediction</h1>
+        <p id="gender-prediction">gender: ?</p>
+        <p id="probability-prediction">probability: ?</p>
+        
+        <h1 id="saved-answer-header">saved answer</h1>
+        <p id="saved-gender">saved answer</p>
+        <button id="clear-button" onclick="clearSavedPrediction()">clear</button>
+      </div>
+   </div>
    </div>
    <script src="script.js"></script>
 </body>
