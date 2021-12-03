@@ -1,14 +1,25 @@
+/*
+fitting the html contents in the whole page
+*/
 html,body{
   height: 100%;
   width: 100%;
   margin: 0;
 }
+
+/*
+styling the text area
+*/
 input[type='text']{
   border-radius: 4px;
   outline: none;
   border: 1px black solid;
   padding: 2px;
 }
+
+/*
+
+*/
 #wrapper{
   height: 100%;
   width: 100%;
@@ -20,11 +31,15 @@ input[type='text']{
   background-size: cover;
   background-position: center;
 }
+
+/*
+
+*/
 .container {
   width: 500px;
   max-height: 300px;
   display: flex;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #FFC0CBaa;
   padding: 15px 15px 30px 30px;
   font-family: Arial, Helvetica, sans-serif;
@@ -32,15 +47,25 @@ input[type='text']{
   animation: fade 1.5s;
 }
 
+/*
+
+*/
 .column {
   width: 50%;
   display: flex;
   flex-direction: column;
 }
 
+/*
+
+*/
 button[onclick="savePrediction()"] {
   margin-top: 20px;
 }
+
+/*
+
+*/
 form {
   min-height: 150px;
   display: flex;
@@ -48,24 +73,32 @@ form {
   flex-direction: column;
 }
 
+/*
+This block is used for styling the error message. 
+*/
 #pop-up{
   visibility: hidden;
   position: absolute;
   height: 64px;
-  width: 300px;
+  width: 400px;
   top: 20px;
-  left: calc(50% - 150px);
+  left: calc(50% - 200px);
   border-radius: 5px;
   background-color: #ee0000aa;
   color:white;
   font-weight: bolder;
   font-family: 'Roboto Mono', monospace;
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/*
+This block is used for styling the buttons(submit, save, clear). 
+border-radius is used to make the edges less sharp.
+the cursor's shape is changed then the mouse is on the button area 
+*/
 button{
   border-radius: 3px;
   cursor: pointer;
@@ -73,21 +106,42 @@ button{
   border: 1px black solid;
 }
 
+/*
+By the use of this block, the buttons background and text color changes
+when mouse is on the button. 
+*/
 button:hover{
   background-color: palevioletred;
   color: white;
 }
 
+/*
+The saved answer part(including header, clear button, saved answer) is hidden until
+the user send a request(using submit button). 
+This block is used to hide saved answer header using it's Id.
+*/
 #saved-answer-header{
   visibility: hidden;
 }
+
+/*
+This block is used to hide clear button using it's Id
+*/
 #clear-button{
   visibility: hidden;
 }
+
+/*
+This block is used to hide saved gender using it's Id
+*/
 #saved-gender{
   visibility: hidden;
 }
 
+/*
+In this block we define an animation to use it for the main rectangle. 
+By the use of this animation the rectangle fades in. 
+*/
 @keyframes fade {
   0% {
     opacity: 0;
