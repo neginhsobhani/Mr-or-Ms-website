@@ -9,6 +9,7 @@ html,body{
 
 /*
 styling the text area
+- since we have two types of input(text an radio button) we choose the text type.
 */
 input[type='text']{
   border-radius: 4px;
@@ -18,7 +19,9 @@ input[type='text']{
 }
 
 /*
-
+Styling the center rectangle
+  - the goal here is a background image on a website that covers the entire browser window at all times.
+  - I have also centered the inside container which is a rectangle here.
 */
 #wrapper{
   height: 100%;
@@ -33,7 +36,14 @@ input[type='text']{
 }
 
 /*
-
+The container here holds all the content in this page. For the display of the contents I have used flex.
+- I have seta max-height property so that the height of this container doesn't change in different browsers and systems.
+- For more beautiful display I have used padding and border-radius for the edges of the rectangle.
+- In order to have a transparent container I have added 2 characters to the end of the hex code color of the background color(with 
+  this method, the text transparency wouldn't change).
+- I have givven the container shadow using box-shadow property.
+- When you load this web page, the container fades in. In order to implement this animation I have defined an animation called 
+  fade using @keyframes. 
 */
 .container {
   width: 500px;
@@ -48,7 +58,8 @@ input[type='text']{
 }
 
 /*
-
+Styling the columns of the container using flex
+  - The container contains two columns and it is divided in half(width: 50%)
 */
 .column {
   width: 50%;
@@ -57,14 +68,14 @@ input[type='text']{
 }
 
 /*
-
+Styling the 'save' button
 */
 button[onclick="savePrediction()"] {
   margin-top: 20px;
 }
 
 /*
-
+Styling the form using flex 
 */
 form {
   min-height: 150px;
@@ -74,7 +85,11 @@ form {
 }
 
 /*
-This block is used for styling the error message. 
+This block is used for styling the error message.
+- Since this error is not always shown, it is hidden by default.
+- The error message box is centered for more beautiful display. 
+- The contents of the error box message are centered as well. 
+- I have used Google fonts as the font of error message.
 */
 #pop-up{
   visibility: hidden;
