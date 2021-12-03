@@ -102,5 +102,7 @@ function savePrediction(){
  */
 function clearSavedPrediction(){
     localStorage.removeItem(inputName.value);
+    savedAnswerHeader.style.visibility = 'hidden';
+    clearButton.style.visibility = 'hidden';
     savedGender.style.visibility = 'hidden';
 }
